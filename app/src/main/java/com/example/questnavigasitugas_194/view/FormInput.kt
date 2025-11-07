@@ -179,11 +179,19 @@ fun FormInput(
                         },
                         title = { Text(text = "Data Berhasil Disimpan!") },
                         text = {
-                            Text("Terima kasih telah mengisi data dengan benar.")
+                            Column {
+                                Text("Terima kasih telah mengisi data dengan benar.\n")
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Text("Nama: $textNama")
+                                Text("Jenis Kelamin: $textJK")
+                                Text("Status: $textStatus")
+                                Text("Alamat: $textAlamat")
+                            }
                         },
                         shape = RoundedCornerShape(16.dp)
                     )
                 }
+
             }
         }
     }
