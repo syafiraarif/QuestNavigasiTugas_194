@@ -90,6 +90,37 @@ fun ListPeserta(
 
                     Spacer(modifier = Modifier.height(8.dp))
 
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column {
+                            Text(
+                                text = stringResource(id = R.string.status_perkawinan),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp
+                            )
+
+                            Text(
+                                text = "Lajang",
+                                fontSize = 14.sp
+                            )
+                        }
+
+                        Column {
+                            Text(
+                                text = stringResource(id = R.string.alamat),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp
+                            )
+
+                            Text(
+                                text = "Sleman",
+                                fontSize = 14.sp
+                            )
+                        }
+                    }
+
 
                 }
             }
