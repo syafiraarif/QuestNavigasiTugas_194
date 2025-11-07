@@ -138,6 +138,9 @@ fun FormInput(
                     modifier = Modifier.fillMaxWidth(),
                     placeholder = { Text("Masukkan alamat lengkap") }
                 )
+
+                Spacer(modifier = Modifier.height(24.dp))
+
             }
         }
     }
