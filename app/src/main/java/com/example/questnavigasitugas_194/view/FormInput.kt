@@ -10,13 +10,18 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -141,6 +146,44 @@ fun FormInput(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
+                Row(
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    OutlinedButton(onClick = OnBackClick) {
+                        Text(text = stringResource(id = R.string.back))
+                    }
+
+                    Button(
+                        onClick = {
+                            if (textNama.isNotEmpty() && textJK.isNotEmpty() && textStatus.isNotEmpty() && textAlamat.isNotEmpty()) {
+                                showDialog = true
+                            }
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7B1FA2))
+                    ) {
+                        Text(text = stringResource(id = R.string.submit))
+                    }
+                }
+
+                if (showDialog) {
+                    AlertDialog(
+                        onDismissRequest = { showDialog = false },
+                        confirmButton = {
+                            TextButton(onClick = {
+                                showDialog = false
+                                OnSubmitClick()
+                            }) {
+                                Text("OK", color = Color(0xFF7B1FA2))
+                            }
+                        },
+                        title = { Text(text = "Data Berhasil Disimpan!") },
+                        text = {
+                            Text("Terima kasih telah mengisi data dengan benar.")
+                        },
+                        shape = RoundedCornerShape(16.dp)
+                    )
+                }
             }
         }
     }
