@@ -131,11 +131,14 @@ fun FormInput(
                     }
                 }
 
-
+                Text(text = stringResource(id = R.string.alamat))
+                OutlinedTextField(
+                    value = textAlamat,
+                    onValueChange = { textAlamat = it },
+                    modifier = Modifier.fillMaxWidth(),
+                    placeholder = { Text("Masukkan alamat lengkap") }
+                )
             }
-
         }
-
     }
-
 }
