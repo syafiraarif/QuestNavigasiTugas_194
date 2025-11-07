@@ -4,8 +4,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -66,8 +68,14 @@ fun Home (
                 fontSize = 18.sp,
                 textAlign = TextAlign.Center
             )
+        }
 
-
+        Button(
+            onClick = OnMasukBtnClick,
+            modifier = Modifier
+                .fillMaxWidth(0.6f)
+                .padding(top = 24.dp)
+        ) {
         }
     }
 }
