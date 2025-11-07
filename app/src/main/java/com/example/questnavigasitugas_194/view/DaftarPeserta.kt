@@ -72,6 +72,18 @@ fun ListPeserta(
                             )
                         }
 
+                        Column {
+                            Text(
+                                text = stringResource(id = R.string.jenis_kelamin),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp
+                            )
+
+                            Text(
+                                text = "Perempuan",
+                                fontSize = 14.sp
+                            )
+                        }
                     }
                 }
             }
