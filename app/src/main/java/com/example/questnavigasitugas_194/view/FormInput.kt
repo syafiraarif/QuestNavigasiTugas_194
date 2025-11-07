@@ -53,6 +53,9 @@ fun FormInput(
             color = Color.Black
         )
 
+        Spacer(modifier = Modifier.height(20.dp))
+
+
     }
 
 }
