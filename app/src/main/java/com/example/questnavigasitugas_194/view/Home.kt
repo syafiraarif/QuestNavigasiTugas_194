@@ -76,6 +76,10 @@ fun Home (
                 .fillMaxWidth(0.6f)
                 .padding(top = 24.dp)
         ) {
+            Text(
+                text = stringResource(id = R.string.masuk),
+                fontSize = 18.sp
+            )
         }
     }
 }
