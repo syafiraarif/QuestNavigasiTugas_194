@@ -109,6 +109,28 @@ fun FormInput(
                     }
                 }
 
+                Text(text = stringResource(id = R.string.status_perkawinan))
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    statusList.forEach { item ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.selectable(
+                                selected = textStatus == item,
+                                onClick = { textStatus = item }
+                            )
+                        ) {
+                            RadioButton(
+                                selected = textStatus == item,
+                                onClick = { textStatus = item }
+                            )
+                            Text(text = item)
+                        }
+                    }
+                }
+
 
             }
 
