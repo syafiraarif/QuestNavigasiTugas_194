@@ -1,11 +1,17 @@
 package com.example.questnavigasitugas_194.view
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 
 @OptIn (ExperimentalMaterial3Api::class)
@@ -25,8 +31,18 @@ fun FormInput(
     var status by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
 
+    var showDialog by remember { mutableStateOf(false) }
+
     val genderList = listOf("Laki-laki","Perempuan")
     val statusList = listOf("Janda","Lajang","Duda")
 
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(20.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+    }
 
 }
