@@ -59,6 +59,18 @@ fun ListPeserta(
                         horizontalArrangement = Arrangement.SpaceBetween,
                         modifier = Modifier.fillMaxWidth()
                     ) {
+                        Column {
+                            Text(
+                                text = stringResource(id = R.string.nama_lengkap),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp
+                            )
+
+                            Text(
+                                text = "Putri Aulia",
+                                fontSize = 14.sp
+                            )
+                        }
 
                     }
                 }
