@@ -22,7 +22,7 @@ enum class Navigasi {
 @OptIn (ExperimentalMaterial3Api::class)
 @Composable
 
-fun NavigasiApp(
+fun DataApp(
     navController: NavHostController = rememberNavController()
 ) {
     Scaffold { innerPadding ->
